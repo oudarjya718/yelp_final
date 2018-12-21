@@ -24,12 +24,9 @@ var commentRoutes    = require("./routes/comments"),
     reviewRoutes     = require("./routes/reviews")
 
 
-// console.log(process.env.DATABASEURL);
-// mongoose.connect("mongodb://localhost/yelp_camp") //SHOULD BE REMOVED WHEN UPLOADING ON GITHUB OR MAKING IT PUBLIC//
-// AND EXPORTED IN DATABASEURL WHEN STARTING DEVELOPMENT SERVER
+
     
 mongoose.connect(process.env.DATABASEURL);
-// mongoose.connect("mongodb://oudarjya:database1@ds113703.mlab.com:13703/yelpcamp123");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
